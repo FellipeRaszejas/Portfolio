@@ -1,0 +1,203 @@
+/* Mapeamento de cores, espaçamentos entre linhas, sombras, blur, etc (Tuo que pode ser alterado) */
+
+
+:root {
+  /* defininando a tipografia padrão da página */
+
+  /* fonte utilizada (1°) e qual será utilizada caso quebre*/
+  --font-family: "Manrope", sans-serif;
+
+  /* essas siglas são base de tamanho utilizando roupas 
+    Considerando a base padrão dos navegadores (1rem = 16px).
+    */
+
+  /* REM: é uma unidade de medida relativa baseado no tamanho da fonte raiz do navegador (ou seja, as TAGS html). Formula matematica rem X 16px */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: clamp(
+    2rem,
+    2vw + 1rem,
+    3rem
+  ); /* * No celular nunca fica menor que 2rem (32px)
+     No desktop nunca fica maior que 4rem (64px)
+     Em telas intermediárias, varia proporcionalmente à largura da tela (vw) */
+  --font-size-5xl: clamp(2rem, 4vw + 1rem, 4rem);
+
+  /* tipos de negrito */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* distanciamento entre as linhas */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Cores de fundo */
+  --bg-primary: #f8f6fc;
+  --bg-secondary: #f2eef9;
+  --bg-tertiary: #eae4f5;
+
+  /*
+   Surface
+   Nem tudo em uma página pode ou deve estar na mesma cor de fundo. Telas modernas usam "camadas" de superfícies para agrupar conteúdos relacionados (ex: uma div de card em cima da tela).
+    =========================== */
+
+  --surface-primary: #ffffff; /* Branco puro */
+  --surface-secondary: #f7f3fd; /* Um tom de lilás/roxo bem suave */
+
+  /* paleta de cores base*/
+  --primary: #7665e3;
+  --primary-hover: #8b7af0;
+  --primary-light: #e8e2ff;
+  --secondary: #c78ef8;
+  --secondary-light: #f3e8ff;
+
+  /* o accent serve para chamar a atenção do usuário para elementos interativos ou informativos específicos. */
+  --accent: #6fb7d6;
+  --accent-light: #ddf2fa;
+
+  /* Cores para texto*/
+  --text-primary: #2e2b36;
+  --text-secondary: #6b6677;
+  --text-light: #9a95a8;
+  --text-white: #ffffff;
+
+  /* Cores de bordas */
+  --border: #ddd6ec;
+  --border-hover: #c8bce8;
+
+  /*Espaçamentos */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Bordas arredondadas padronificadas*/
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  --border-circle: 50%;
+
+  /* Tipos de Sombras*/
+  --shadow-xs: 0 1px 2px rgba(46, 43, 54, 0.05);
+  --shadow-sm: 0 2px 8px rgba(46, 43, 54, 0.08);
+  --shadow-md: 0 8px 24px rgba(46, 43, 54, 0.1);
+  --shadow-lg: 0 16px 40px rgba(46, 43, 54, 0.12);
+  --shadow-xl: 0 24px 60px rgba(46, 43, 54, 0.16);
+
+  /*Tipos de Transições*/
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.4s ease;
+  /* ===========================
+   Semantic Colors
+
+   Essas cores representam estados da interface.
+   Nunca utilize primary ou accent para indicar
+   sucesso, erro ou alerta.
+
+  /* Sucesso */
+  --success: #22c55e;
+  --success-light: #dcfce7;
+
+  /* Aviso */
+  --warning: #f59e0b;
+  --warning-light: #fef3c7;
+
+  /* Erro */
+  --error: #ef4444;
+  --error-light: #fee2e2;
+
+  /* Informação */
+  --info: #3b82f6;
+  --info-light: #dbeafe;
+
+  /* ===========================
+   Focus
+
+   Utilizado quando o usuário navega utilizando
+   teclado (Tab) ou tecnologias assistivas.
+    =========================== */
+  --focus-ring: 0 0 0 3px rgba(118, 101, 227, 0.25);
+  --opacity-disabled: 0.5;
+  --opacity-overlay: 0.7;
+  --opacity-hidden: 0;
+  /* Layout*/
+
+  --container: 1200px;
+  --container-wide: 1400px;
+  --navbar-height: 5rem;
+  --sidebar-width: 20rem;
+  --section-spacing: var(--space-9);
+
+  /* expressura das bordas */
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 3px;
+
+  /*Letter Spacing*/
+
+  --letter-spacing-tight: -0.03em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /* cursor */
+  --cursor-disabled: not-allowed;
+  --cursor-click: pointer;
+
+  /* Motion: representa como os elementos se movimentam na interface
+  envolve: duração, velocidade, aceleração, desaceleração, animações.*/
+  --transition-slow: 0.4s;
+  --ease-linear: linear;
+  --ease-default: ease;
+  --ease-in: ease-in;
+  --ease-out: ease-out;
+  --ease-in-out: ease-in-out;
+
+  /* Aspect Ratio É a proporção entre:   largura || altura     Não é tamanho. É formato.*/
+  --ratio-square: 1 / 1;
+  --ratio-video: 16 / 9;
+  --ratio-photo: 4 / 3;
+
+  /*Blur*/
+  --blur-sm: 4px;
+  --blur-md: 8px;
+  --blur-lg: 16px;
+
+  /*Overlay*/
+  --overlay: rgba(46, 43, 54, 0.55);
+
+  /*Text Selection */
+  --selection-bg: var(--primary);
+  --selection-color: var(--text-white);
+
+  /* Scrol*/
+  --scrollbar-size: 0.65rem;
+  --scrollbar-thumb: var(--primary);
+  --scrollbar-track: var(--bg-secondary);
+  --scroll-offset: 100px;
+}
+
+button:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+html {
+  scroll-padding-top: var(--scroll-offset);
+}

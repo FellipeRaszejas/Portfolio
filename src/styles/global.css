@@ -1,0 +1,13 @@
+/* compartamento geral da aplicação */
+
+
+/* Essas duas propriedades servem para melhorar a renderização visual das fontes nos navegadores, deixando as letras mais finas, nítidas e elegantes. */
+body{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-color);
+}

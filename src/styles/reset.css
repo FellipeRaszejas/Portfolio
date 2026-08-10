@@ -1,0 +1,25 @@
+/* formatação de todas as páginas */
+
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+img,
+picture{
+    display:block;
+    max-width:100%;
+}
+
+button,
+input,
+textarea,
+select{
+    font:inherit;
+}

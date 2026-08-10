@@ -1,0 +1,24 @@
+import { useState } from "react";
+import "./App.css";
+import Button from "./components/ui/Button/Button";
+import Card from "./components/ui/Card/Card";
+import SectionTitle from "./components/ui/SectionTitle/SectionTitle";
+import Input from "./components/ui/Input/Input";
+
+function App() {
+
+  return (
+    <>
+      <Button>Contato</Button>
+      <Card>
+        <h2>Meu Card</h2>
+        <p>Conteúdo do card.</p>
+      </Card>
+      <SectionTitle>Teste</SectionTitle>
+      <Input   label="Insira seu nome"
+ tipo="text" nome="nome" place="fun"/>
+    </>
+  );
+}
+
+export default App;
