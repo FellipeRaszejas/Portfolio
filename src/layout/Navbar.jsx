@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Navbar.css";
 import Button from "../components/ui/Button/Button";
 import "../styles/variables.css";
 
 function Navbar() {
+
   const [navbar, setNavbar] = useState(true);
   const [sidebar, setSidebar] = useState(false);
   const [aberto, setAberto] = useState(false);
@@ -12,19 +13,26 @@ function Navbar() {
   const fotoPadrao = "/avatar.png";
   const perfil = "./user.png";
 
-  const handleAvatarClick = () => {
-    if (!usuario) {
-      const confirmou = window.confirm(
-        "Você precisa se autentifcar. Deseja ir para a página de login?",
-      );
-      if (confirmou) {
-        window.location.href = "/login"; // Faz o navegador mudar de página imediatamente
-        setUsuario({ nome: "Fellipe", foto: perfil });
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const handleChange = (e) => {
+      if (e.matches) {
+        // entrou no modo mobile
+        setNavbar(false);
+        setSidebar(true);
+      } else {
+        // voltou pro desktop
+        setNavbar(true);
+        setSidebar(false);
       }
-    } else {
-      alert(`Olá, ${usuario.nome}! Redirecionando para seu perfil...`);
-    }
-  };
+    };
+
+    handleChange(mediaQuery); // roda uma vez ao montar, pra já nascer correto
+    mediaQuery.addEventListener("change", handleChange);
+
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
   return (
     <>
       {sidebar && (
@@ -71,7 +79,7 @@ function Navbar() {
                 </ul>
 
                 <div className="options">
-                  <button
+                  {/* <button
                     type="button"
                     className="avatar-btn"
                     onClick={handleAvatarClick}
@@ -82,7 +90,7 @@ function Navbar() {
                       alt="Avatar do Usuário"
                       className="avatar-img"
                     />
-                  </button>
+                  </button> */}
 
                   <Button
                     onClick={() => {
