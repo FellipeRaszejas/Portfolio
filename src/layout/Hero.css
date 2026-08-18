@@ -1,0 +1,123 @@
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: var(--bg-tertiary);
+}
+
+/* --- COLUNA ESQUERDA (PERFIL) --- */
+.profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 260px;
+  flex-shrink: 0;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin-bottom: 16px;
+  transition: all 0.1s ease-out;
+}
+
+.hero-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #24292f;
+  background-color: #24292f;
+  box-sizing: border-box;
+}
+
+.profile-titles {
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+
+.profile-subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #57606a;
+  margin-top: 4px;
+}
+
+/* --- COLUNA DIREITA (README CARD) --- */
+.readme-card {
+  flex: 1;
+  width: 100%;
+  background-color: var(--bg-primary);
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease-out;
+}
+
+.readme-body {
+  padding: 24px;
+  color: #24292f;
+  line-height: 1.6;
+}
+
+.readme-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #d0d7de;
+  padding-bottom: 8px;
+}
+
+.readme-body p {
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: #24292f;
+}
+.readme-card:hover {
+  transform: scale(0.95);
+}
+
+/* .avatar-wrapper:hover {
+  transform: scale(1.1);
+} */
+
+/* --- RESPONSIVIDADE (CELULARES E TABLETS) --- */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 16px;
+    gap: 1.5rem;
+  }
+
+  .profile-sidebar {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .avatar-wrapper {
+    width: 180px;
+    height: 180px;
+  }
+
+  .readme-card {
+    width: 100%;
+  }
+
+  .readme-body {
+    padding: 16px;
+  }
+}

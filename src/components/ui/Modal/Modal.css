@@ -6,12 +6,18 @@
   /* inset: top: 0;right: 0;bottom: 0;left: 0; */
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  /* z-index posiciona o conteudo da tela e seu background estará com efeito */
 }
 .modal-card {
   background-color: white;
   padding: 2rem;
   border-radius: 1rem;
-}
-.modal.active {
-  filter: blur(5px);
+
+  /* Para organizar o conteúdo do cartão e o botão internamente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
