@@ -13,7 +13,7 @@ function Hero() {
           />
         </div>
         <div className="profile-titles">
-          <SectionTitle>Fellipe Raszejas</SectionTitle>
+          <h2>Fellipe Raszejas</h2>
           <h3 className="profile-subtitle">Desenvolvedor</h3>
         </div>
       </div>

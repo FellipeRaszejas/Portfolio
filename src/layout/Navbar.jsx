@@ -47,7 +47,7 @@ function Navbar() {
                 {/* 1. Logo da Sidebar */}
                 <div className="logo">
                   <a href="#hero">
-                    <img src="/logo.png" alt="Logo" className="logo-img" />
+                    <img src="/marca.png" alt="Logo" className="logo-img" />
                   </a>
                 </div>
 
@@ -112,7 +112,7 @@ function Navbar() {
           {/* 3. Logo da Navbar Desktop */}
           <div className="logo">
             <a href="#hero">
-              <img src="/logo.png" alt="Logo" className="logo-img" />
+                    <img src="/marca.png" alt="Logo" className="logo-img" />
             </a>
           </div>
 

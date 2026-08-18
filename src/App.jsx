@@ -30,9 +30,11 @@ function App() {
         <option value="two">Opção</option>
         <option value="three">Opção</option>
       </Select> */}
-      <Hero />
+      
+            <Hero />
       <Navbar />
       <Education />
+
     </>
   );
 }
